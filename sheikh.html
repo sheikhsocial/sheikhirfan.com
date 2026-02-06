@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD IRFAN HOSSAIN | Digital Marketing & Procurement Specialist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #DE2910;
+            --secondary: #006A4E;
+            --neon-gold: #FFEC00;
+            --dark: #1a1a1a;
+            --light: #ffffff;
+            --gray: #64748b;
+            --light-gray: #f5f5f5;
+            --border-radius: 12px;
+            
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+            
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background: var(--light);
+            overflow-x: hidden;
+        }
+
+        /* ========== NAVIGATION ========== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            padding: 1.2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+
+        nav.scrolled {
+            padding: 0.8rem 5%;
+            background: white;
+            box-shadow: var(--shadow-md);
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: var(--transition);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* ========== HERO SECTION ========== */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 5%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            z-index: 0;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        .hero-content .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            background: white;
+            color: var(--primary);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            box-shadow: var(--shadow-lg);
+            border: 2px solid white;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .cta-button.secondary:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        /* ========== SECTION BASE ========== */
+        section {
+            padding: 6rem 5%;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+            font-weight: 700;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--secondary);
+        }
+
+        .section-title p {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 1.5rem auto 0;
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        /* ========== ABOUT SECTION ========== */
+        #about {
+            background: white;
+        }
+
+        .about-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            line-height: 1.8;
+            color: var(--dark);
+            font-size: 1.05rem;
+            font-weight: 300;
+        }
+
+        .about-content p {
+            margin-bottom: 1.2rem;
+        }
+
+        .about-content strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, rgba(222, 41, 16, 0.05) 0%, rgba(0, 106, 78, 0.05) 100%);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary);
+            margin-top: 2rem;
+            position: relative;
+        }
+
+        .highlight p {
+            margin: 0;
+            font-style: italic;
+            color: var(--primary);
+            font-weight: 500;
+            font-size: 1.15rem;
+        }
+
+        /* ========== EXPERIENCE SECTION ========== */
+        #experience {
+            background: var(--light-gray);
+        }
+
+        .timeline {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--primary);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 4rem;
+            position: relative;
+            width: 100%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            justify-content: flex-end;
+        }
+
+        .timeline-content {
+            width: calc(50% - 50px);
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: 50px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 50px;
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: var(--primary);
+            border-radius: 50%;
+            top: 25px;
+            border: 3px solid white;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            right: -50px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::before {
+            left: -50px;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .timeline-content .company {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            display: block;
+        }
+
+        .timeline-content .date {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: block;
+            font-size: 0.95rem;
+        }
+
+        .timeline-content ul {
+            padding-left: 2rem;
+            margin-top: 1rem;
+            list-style: none;
+        }
+
+        .timeline-content li {
+            margin-bottom: 0.6rem;
+            color: var(--gray);
+            font-size: 1rem;
+            line-height: 1.6;
+            font-weight: 300;
+            position: relative;
+            padding-left: 1.8rem;
+        }
+
+        .timeline-content li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        /* ========== EDUCATION & RESEARCH ========== */
+        #education {
+            background: white;
+        }
+
+        .edu-research-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .edu-card, .research-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .edu-card::before, .research-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--secondary);
+        }
+
+        .research-card::before {
+            background: var(--primary);
+        }
+
+        .edu-card:hover, .research-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .edu-card h3, .research-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.2rem;
+            color: var(--dark);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .edu-card .degree {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            display: block;
+        }
+
+        .edu-card .date {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            display: block;
+            font-size: 0.95rem;
+        }
+
+        .edu-card p {
+            color: var(--gray);
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .research-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.7rem;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .research-card .authors {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 0.8rem;
+            font-style: italic;
+            line-height: 1.5;
+            font-weight: 300;
+        }
+
+        .research-card .journal {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+            display: block;
+            font-size: 0.95rem;
+        }
+
+        .research-card .doi {
+            display: inline-block;
+            background: var(--light-gray);
+            color: var(--primary);
+            padding: 0.4rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 600;
+        }
+
+        .research-card .doi:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateX(3px);
+        }
+
+        .research-interests {
+            margin-top: 1.2rem;
+            padding-top: 1.2rem;
+            border-top: 1px dashed var(--light-gray);
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 1rem;
+        }
+
+        /* ========== SKILLS SECTION ========== */
+        #skills {
+            background: linear-gradient(135deg, var(--secondary) 0%, #004d38 100%);
+            color: white;
+            text-align: center;
+            padding: 5rem 5%;
+        }
+
+        #skills .section-title h2 {
+            color: white;
+        }
+
+        #skills .section-title p {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .skills-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .skill-category {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            text-align: left;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .skill-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-icon {
+            font-size: 2.5rem;
+            color: var(--neon-gold);
+        }
+
+        .skill-category h3 {
+            font-size: 1.4rem;
+            color: white;
+            font-weight: 600;
+        }
+
+        .skill-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skill-list li {
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+            line-height: 1.6;
+            font-weight: 300;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .skill-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--neon-gold);
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .language-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .language-item:last-child {
+            border-bottom: none;
+        }
+
+        .language-name {
+            font-weight: 500;
+            color: white;
+        }
+
+        .language-level {
+            color: var(--neon-gold);
+            font-weight: 600;
+        }
+
+        /* ========== CONTACT SECTION ========== */
+        #contact {
+            background: linear-gradient(135deg, var(--primary) 0%, #b31f0c 100%);
+            color: white;
+            padding: 6rem 5%;
+            text-align: center;
+        }
+
+        #contact .section-title {
+            margin-bottom: 3.5rem;
+        }
+
+        #contact .section-title h2 {
+            color: white;
+        }
+
+        #contact .section-title p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .contact-info {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 2;
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .contact-info a {
+            color: var(--neon-gold);
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .contact-info a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 3.5rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.7rem;
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: var(--transition);
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            min-width: 160px;
+        }
+
+        .social-link:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .social-link i {
+            font-size: 1.4rem;
+        }
+
+        /* ========== CONTACT FORM ========== */
+        .contact-form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .form-title {
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            text-align: left;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.9rem 1.2rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: var(--transition);
+            font-weight: 300;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--neon-gold);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: var(--neon-gold);
+            color: var(--dark);
+            border: none;
+            padding: 1rem 2.2rem;
+            border-radius: 50px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+            margin-top: 0.8rem;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: var(--dark);
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+
+        footer p {
+            margin: 0.4rem 0;
+        }
+
+        /* ========== ANIMATIONS ========== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ========== RESPONSIVE DESIGN ========== */
+        @media (max-width: 1024px) {
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-item {
+                justify-content: flex-start !important;
+                padding-left: 60px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .timeline-content {
+                width: calc(100% - 90px) !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                margin-top: 25px;
+            }
+
+            .timeline-content::before {
+                left: -58px !important;
+                top: -28px;
+            }
+
+            .edu-research-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1.4rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            section {
+                padding: 4.5rem 5%;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: 300px;
+                padding: 0.9rem 2rem;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                padding-left: 50px;
+            }
+
+            .timeline-content {
+                width: calc(100% - 70px) !important;
+                padding: 1.8rem;
+            }
+
+            .timeline-content::before {
+                left: -50px !important;
+                top: -25px;
+                width: 18px;
+                height: 18px;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+
+            .language-list {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form-container {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            nav {
+                padding: 1rem 3%;
+            }
+
+            nav.scrolled {
+                padding: 0.7rem 3%;
+            }
+
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .social-link {
+                width: 100%;
+                max-width: 260px;
+                justify-content: center;
+                padding: 0.9rem;
+            }
+
+            section {
+                padding: 4rem 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="logo">SHEIKH IRFAN</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>MD IRFAN HOSSAIN</h1>
+            <p class="subtitle">Digital Marketing & Procurement Specialist</p>
+            <p class="tagline">China–Bangladesh Trade • B2B Growth • Social Media Advertising • Import-Export Operations</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="cta-button">
+                    <i class="fas fa-paper-plane"></i> Get In Touch
+                </a>
+                <a href="#experience" class="cta-button secondary">
+                    <i class="fas fa-briefcase"></i> View Experience
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-title">
+            <h2>About Me</h2>
+            <p>Professional Background & Expertise</p>
+        </div>
+        <div class="about-container">
+            <div class="about-content">
+                <p>I work at the intersection of digital marketing, procurement, and international trade, helping businesses scale through video-driven marketing strategies and efficient supply chain solutions.</p>
+                <p>My experience spans high-performing video content and advertising for platforms such as Facebook, TikTok, Instagram Reels, and YouTube, alongside hands-on sourcing and procurement operations within China–Bangladesh trade corridors.</p>
+                <p>Currently serving as a Sourcing & Procurement Assistant at Annex Cargo, I collaborate with Chinese suppliers, negotiate terms, and support logistics to strengthen cross-border supply chains.</p>
+                <p>As the Founder of OTRO Innovations LLC, I lead initiatives in content creation, digital marketing, and import–export expansion—bridging Asian markets with a practical, results-focused approach.</p>
+                
+                <div class="highlight">
+                    <p>"Open to meaningful conversations around business growth, digital strategy, procurement, and cross-border trade."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+<section id="experience">
+    <div class="section-title">
+        <h2>Professional Experience</h2>
+        <p>Career Journey & Key Achievements</p>
+    </div>
+    <div class="timeline">
+        <!-- Annex Cargo -->
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h3>Sourcing & Procurement Assistant</h3>
+                <span class="company">Annex Cargo</span>
+                <span class="date">February 2023 – Present</span>
+                <ul>
+                    <li>Spearheaded research to assess Chinese suppliers, ensuring alignment with quality and cost standards</li>
+                    <li>Secured competitive pricing and terms, enhancing cost efficiency in procurement processes</li>
+                    <li>Orchestrated end-to-end procurement for timely order fulfillment between China and Bangladesh</li>
+                    <li>Maintain regular communication with suppliers through WeChat and email</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- OTRO Innovations -->
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h3>Small Business Owner</h3>
+                <span class="company">OTRO Innovations LLC</span>
+                <span class="date">2019 – Present</span>
+                <ul>
+                    <li>Founded OTRO Innovations LLC in New Mexico, USA for content creation and digital marketing</li>
+                    <li>Developed digital marketing campaigns utilizing Facebook ads and lead generation strategies</li>
+                    <li>Strategized 4X to 40X growth plan for import-export operations between China and Bangladesh</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- IRFAN Deals BD -->
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h3>Co-Founder & Digital Marketer</h3>
+                <span class="company">IRFAN Deals BD</span>
+                <span class="date">December 2020 – Present</span>
+                <ul>
+                    <li>Co-founded platform specializing in pre-order and import of products from international markets</li>
+                    <li>Managed digital marketing efforts focusing on customer acquisition through targeted campaigns</li>
+                    <li>Oversaw logistics ensuring delivery within 20-25 days for pre-orders</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Independent Consultant -->
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h3>Independent Consultant</h3>
+                <span class="company">Digital Marketing & Product Sourcing</span>
+                <span class="date">January 2020 – December 2022</span>
+                <ul>
+                    <li>Managed social media campaigns and product sourcing for local retail businesses</li>
+                    <li>Sourced products from Alibaba and 1688.com across Guangzhou and Yiwu</li>
+                    <li>Provided business continuity support during pandemic-related supply chain disruption</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Fiverr -->
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h3>Virtual Assistant | Freelancer</h3>
+                <span class="company">Fiverr</span>
+                <span class="date">July 2017 – Present</span>
+                <ul>
+                    <li>Delivered virtual assistance services including web research and inbox management</li>
+                    <li>Ensured client satisfaction through clear communication and timely problem resolution</li>
+                    <li>Managed multiple tasks independently with strong organizational skills</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Education & Research Section -->
+    <section id="education">
+        <div class="section-title">
+            <h2>Education & Research</h2>
+            <p>Academic Background & Scholarly Contributions</p>
+        </div>
+        <div class="edu-research-container">
+            <!-- Education -->
+            <div class="edu-card">
+                <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                <span class="degree">Bachelor of Arts in English</span>
+                <span class="date">2018 – 2022</span>
+                <div class="institution">National University, Bangladesh</div>
+                <p><strong>Focus:</strong> Literature, linguistics, and communication</p>
+                <p><strong>Achievements:</strong> Developed analytical writing, intercultural communication, and critical thinking skills</p>
+                <p><strong>Medium of Instruction:</strong> Entire BA program conducted in English</p>
+            </div>
+
+            <!-- Research -->
+            <div class="research-card">
+                <h3><i class="fas fa-book"></i> Research Publications</h3>
+                
+                <h4>1. The Impact of Mobile-Based FinTech Lending Platforms</h4>
+                <div class="authors">Md Imran; Md Irfan Hossain; Tarannum Nishat Anika (2026)</div>
+                <span class="journal">International Journal of Innovative Science and Research Technology, 11(1), 35-42</span>
+                <a href="https://doi.org/10.38124/ijisrt/26jan087" class="doi" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> DOI: 10.38124/ijisrt/26jan087
+                </a>
+
+                <h4 style="margin-top: 1.2rem;">2. Behavioral Intention to Use Cryptocurrency</h4>
+                <div class="authors">Md Akash; Shake Farhan; Md Irfan Hossain; Faisal Hossain (2026)</div>
+                <span class="journal">International Journal of Asian Social Science — Accepted</span>
+
+                <h4 style="margin-top: 1.2rem;">3. Manuscript Under Review</h4>
+                <div class="authors">Md Akash; Shake Farhan; Md Irfan Hossain (2025)</div>
+                <span class="journal">Journal of Electronic Business & Digital Economics</span>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--gray); font-weight: 300;">
+                    "How TikTok, Instagram, and Side–Hustle Cultures Drive Gen Z's Digital Entrepreneurial Intentions"
+                </p>
+
+                <div class="research-interests">
+                    <strong>Research Interests:</strong> International Trade, Digital Entrepreneurship, FinTech Adoption
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="section-title">
+            <h2>Skills & Expertise</h2>
+            <p>Technical Abilities & Language Proficiency</p>
+        </div>
+        <div class="skills-container">
+            <!-- Digital Marketing -->
+            <div class="skill-category">
+                <div class="skill-header">
+                    <i class="fas fa-bullhorn skill-icon"></i>
+                    <h3>Digital Marketing</h3>
+                </div>
+                <ul class="skill-list">
+                    <li>Meta Ads Manager</li>
+                    <li>Social Media Campaigns</li>
+                    <li>Email Marketing & Drip Campaigns</li>
+                    <li>Facebook, TikTok, Instagram Reels</li>
+                    <li>YouTube Content Strategy</li>
+                    <li>Lead Generation</li>
+                </ul>
+            </div>
+
+            <!-- Trade & Operations -->
+            <div class="skill-category">
+                <div class="skill-header">
+                    <i class="fas fa-truck skill-icon"></i>
+                    <h3>Trade & Operations</h3>
+                </div>
+                <ul class="skill-list">
+                    <li>Supplier Negotiation</li>
+                    <li>Product Sourcing (Alibaba, 1688.com)</li>
+                    <li>Import-Export Operations</li>
+                    <li>Logistics Coordination</li>
+                    <li>China-Bangladesh Trade Corridors</li>
+                    <li>Quality Verification</li>
+                </ul>
+            </div>
+
+            <!-- Languages -->
+<div class="skill-category">
+    <div class="skill-header">
+        <i class="fas fa-language skill-icon"></i>
+        <h3>Languages</h3>
+    </div>
+    <ul class="skill-list">
+        <li><span class="language-name">Bengali</span> <span class="language-level">Native</span></li>
+        <li><span class="language-name">English</span> <span class="language-level">C1 (Professional)</span></li>
+        <li><span class="language-name">Mandarin Chinese</span> <span class="language-level">HSK 1</span></li>
+        <li><span class="language-name">Urdu</span> <span class="language-level">Professional</span></li>
+        <li><span class="language-name">Hindi</span> <span class="language-level">Professional</span></li>
+    </ul>
+</div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-title">
+            <h2>Connect With Me</h2>
+            <p>Let's build something great together</p>
+        </div>
+        <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt"></i> Saidpur, Bangladesh</p>
+        </div>
+        <div class="social-links">
+            <a href="http://linkedin.com/in/sheikhsocial" class="social-link" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="mailto:info@sheikhirfan.com" class="social-link">
+                <i class="fas fa-envelope"></i> Email
+            </a>
+            <a href="tel:+8801866387770" class="social-link">
+                <i class="fas fa-phone"></i> Phone
+            </a>
+            <a href="https://ibb.co.com/jvfkWhVn" class="social-link">
+                <i class="fab fa-weixin"></i> WeChat
+            </a>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-container">
+            <h3 class="form-title"><i class="fas fa-envelope"></i> Send Me a Message</h3>
+            <form id="contactForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name"><i class="fas fa-user"></i> Your Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="subject"><i class="fas fa-tag"></i> Subject</label>
+                    <input type="text" id="subject" class="form-control" placeholder="What is this about?" required>
+                </div>
+                <div class="form-group">
+                    <label for="message"><i class="fas fa-comment"></i> Message</label>
+                    <textarea id="message" class="form-control" placeholder="Write your message here..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 MD IRFAN HOSSAIN. All rights reserved.</p>
+        <p>Digital Marketing & Procurement Specialist | China-Bangladesh Trade</p>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                if (targetId === '#contactForm') return;
+                
+                const target = document.querySelector(targetId);
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Contact form handling
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+                
+                const mailtoLink = `mailto:info@sheikhrfan.com?subject=${encodeURIComponent(subject + ' - ' + name)}&body=${encodeURIComponent('Name: ' + name + '%0D%0AEmail: ' + email + '%0D%0A%0D%0AMessage:%0D%0A' + message)}`;
+                
+                window.location.href = mailtoLink;
+                
+                contactForm.reset();
+                
+                alert('Thank you for your message! Your email client will open shortly.');
+            });
+        }
+    </script>
+</body>
+</html>

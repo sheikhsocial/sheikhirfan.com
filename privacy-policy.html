@@ -1,1 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | MD IRFAN HOSSAIN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        :root {
+            --primary: #DE2910;
+            --secondary: #006A4E;
+            --neon-gold: #FFEC00;
+            --dark: #1a1a1a;
+            --light: #ffffff;
+            --gray: #64748b;
+            --light-gray: #f5f5f5;
+            --border-radius: 12px;
+            
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: var(--dark);
+            background: var(--light);
+            overflow-x: hidden;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            padding: 1.2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 10rem 5% 5rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .page-header h1 {
+            font-size: 2.8rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .page-header p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        .last-updated {
+            background: var(--light-gray);
+            padding: 1rem 2rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 3rem;
+            text-align: center;
+            font-size: 0.95rem;
+            color: var(--gray);
+        }
+
+        .content-section {
+            background: white;
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            margin-bottom: 2.5rem;
+        }
+
+        .content-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-gray);
+        }
+
+        .content-section h3 {
+            font-size: 1.4rem;
+            color: var(--dark);
+            margin: 1.5rem 0 1rem;
+            font-weight: 600;
+        }
+
+        .content-section p {
+            color: var(--gray);
+            margin-bottom: 1rem;
+            font-weight: 300;
+            line-height: 1.9;
+        }
+
+        .content-section ul {
+            padding-left: 2rem;
+            margin: 1.5rem 0;
+        }
+
+        .content-section li {
+            color: var(--gray);
+            margin-bottom: 0.8rem;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(222, 41, 16, 0.05) 0%, rgba(0, 106, 78, 0.05) 100%);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary);
+            margin: 2rem 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            font-style: italic;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        footer {
+            background: var(--dark);
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 8rem 5% 4rem;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .content-section {
+                padding: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="logo">SHEIKH IRFAN</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>Privacy Policy</h1>
+            <p>How we collect, use, and protect your information</p>
+        </div>
+
+        <div class="last-updated">
+            <strong>Last Updated:</strong> February 8, 2026
+        </div>
+
+        <div class="content-section">
+            <h2>Introduction</h2>
+            <p>Welcome to sheikhirfan.com. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website. Please read this policy carefully. If you do not agree with the terms of this Privacy Policy, please do not access the site.</p>
+            
+            <div class="highlight-box">
+                <p>We are committed to protecting your privacy and ensuring the security of your personal information.</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Information We Collect</h2>
+            
+            <h3>Personal Information</h3>
+            <p>We may collect personal information that you voluntarily provide to us when you:</p>
+            <ul>
+                <li>Fill out and submit the contact form on our website</li>
+                <li>Send us an email directly</li>
+                <li>Connect with us through social media platforms</li>
+            </ul>
+            
+            <p>The personal information we collect may include:</p>
+            <ul>
+                <li>Name</li>
+                <li>Email address</li>
+                <li>Phone number</li>
+                <li>Company name</li>
+                <li>Message content</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>How We Use Your Information</h2>
+            <p>We may use the information we collect for various purposes, including:</p>
+            <ul>
+                <li>To respond to your inquiries and provide customer support</li>
+                <li>To communicate with you about services, updates, or opportunities</li>
+                <li>To improve our website and services</li>
+                <li>To comply with legal obligations</li>
+                <li>To protect our rights, privacy, safety, or property</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Information Sharing and Disclosure</h2>
+            <p>We do not sell, trade, or otherwise transfer your personal information to outside parties except in the following circumstances:</p>
+            <ul>
+                <li><strong>Service Providers:</strong> We may share your information with third-party service providers who assist us in operating our website, conducting our business, or serving you.</li>
+                <li><strong>Legal Requirements:</strong> We may disclose your information when required by law or to protect our rights.</li>
+                <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, your information may be transferred.</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Data Security</h2>
+            <p>We implement appropriate security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure.</p>
+            
+            <h3>Security Measures Include:</h3>
+            <ul>
+                <li>SSL encryption for data transmission</li>
+                <li>Secure server infrastructure</li>
+                <li>Regular security audits</li>
+                <li>Limited access to personal information</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Cookies and Tracking Technologies</h2>
+            <p>Our website uses cookies and similar tracking technologies to enhance your browsing experience. Cookies are small data files stored on your device that help us:</p>
+            <ul>
+                <li>Remember your preferences</li>
+                <li>Analyze website traffic and usage patterns</li>
+                <li>Improve website functionality</li>
+            </ul>
+            
+            <p>You can control cookie settings through your browser. However, disabling cookies may affect website functionality.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Third-Party Links</h2>
+            <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices of these external sites. We encourage you to review the privacy policies of any third-party sites you visit.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Your Rights and Choices</h2>
+            <p>You have certain rights regarding your personal information:</p>
+            <ul>
+                <li><strong>Access:</strong> Request a copy of the personal information we hold about you</li>
+                <li><strong>Correction:</strong> Request correction of inaccurate or incomplete information</li>
+                <li><strong>Deletion:</strong> Request deletion of your personal information</li>
+                <li><strong>Opt-out:</strong> Opt-out of marketing communications</li>
+            </ul>
+            
+            <p>To exercise these rights, please contact us using the information below.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Children's Privacy</h2>
+            <p>Our website is not intended for children under the age of 18. We do not knowingly collect personal information from children. If you become aware that a child has provided us with personal information, please contact us.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. You are advised to review this Privacy Policy periodically for any changes.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us:</p>
+            <ul>
+                <li><strong>Email:</strong> info@sheikhirfan.com</li>
+                <li><strong>Website:</strong> https://sheikhirfan.com</li>
+                <li><strong>Location:</strong> Saidpur, Bangladesh</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 MD IRFAN HOSSAIN. All rights reserved.</p>
+        <p>Digital Marketing & Procurement Specialist | China-Bangladesh Trade</p>
+    </footer>
+</body>
+</html>

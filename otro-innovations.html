@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* ========== ALL YOUR EXISTING CSS REMAINS SAME (1180 lines) ========== */
         * {
             margin: 0;
             padding: 0;
@@ -174,6 +175,38 @@
             margin: 0;
         }
 
+        /* ========== NEW: O HUMAN INITIATIVE BANNER ========== */
+        .initiative-banner {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin: 2rem 0 3rem;
+            box-shadow: var(--shadow-lg);
+            animation: fadeIn 0.8s ease;
+        }
+
+        .initiative-banner h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .initiative-banner p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+        }
+
+        .initiative-banner .disclaimer {
+            font-size: 0.9rem;
+            opacity: 0.85;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
         /* ========== INTRO SECTION ========== */
         .intro-section {
             background: white;
@@ -316,10 +349,11 @@
             animation: iconFloat 3s ease-in-out infinite;
         }
 
-        .service-card:nth-child(1) .service-icon { color: var(--primary); }
-        .service-card:nth-child(2) .service-icon { color: var(--secondary); }
-        .service-card:nth-child(3) .service-icon { color: var(--neon-gold); }
-        .service-card:nth-child(4) .service-icon { color: #4f46e5; }
+        .service-card:nth-child(1) .service-icon { color: #667eea; }
+        .service-card:nth-child(2) .service-icon { color: var(--primary); }
+        .service-card:nth-child(3) .service-icon { color: var(--secondary); }
+        .service-card:nth-child(4) .service-icon { color: var(--neon-gold); }
+        .service-card:nth-child(5) .service-icon { color: #4f46e5; }
 
         .service-card h3 {
             font-size: 1.7rem;
@@ -342,9 +376,11 @@
             border-radius: 2px;
         }
 
-        .service-card:nth-child(2) h3::after { background: var(--secondary); }
-        .service-card:nth-child(3) h3::after { background: var(--neon-gold); }
-        .service-card:nth-child(4) h3::after { background: #4f46e5; }
+        .service-card:nth-child(1) h3::after { background: #667eea; }
+        .service-card:nth-child(2) h3::after { background: var(--primary); }
+        .service-card:nth-child(3) h3::after { background: var(--secondary); }
+        .service-card:nth-child(4) h3::after { background: var(--neon-gold); }
+        .service-card:nth-child(5) h3::after { background: #4f46e5; }
 
         .service-card ul {
             list-style: none;
@@ -370,9 +406,21 @@
             font-size: 1.1rem;
         }
 
-        .service-card:nth-child(2) li::before { color: var(--secondary); }
-        .service-card:nth-child(3) li::before { color: var(--neon-gold); }
-        .service-card:nth-child(4) li::before { color: #4f46e5; }
+        .service-card:nth-child(1) li::before { color: #667eea; }
+        .service-card:nth-child(2) li::before { color: var(--primary); }
+        .service-card:nth-child(3) li::before { color: var(--secondary); }
+        .service-card:nth-child(4) li::before { color: var(--neon-gold); }
+        .service-card:nth-child(5) li::before { color: #4f46e5; }
+
+        .service-card .disclaimer {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: rgba(222, 41, 16, 0.05);
+            border-left: 3px solid var(--primary);
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
 
         /* ========== WHY CHOOSE US ========== */
         .why-choose-section {
@@ -836,6 +884,14 @@
             .why-choose-section {
                 padding: 2.5rem;
             }
+            
+            .initiative-banner {
+                padding: 1.5rem;
+            }
+            
+            .initiative-banner h3 {
+                font-size: 1.4rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -892,6 +948,14 @@
             <p><strong>Official Website Under Development</strong></p>
         </div>
 
+        <!-- NEW: O Human Initiative Banner -->
+        <div class="initiative-banner">
+            <h3>🌍 O Human Initiative</h3>
+            <p>OTRO INNOVATIONS LLC also operates <strong>O Human</strong> - a humanitarian initiative collecting voluntary donations for community aid programs including food, shelter, and healthcare assistance.</p>
+            <p><strong>Coming Soon:</strong> ohuman.org</p>
+            <p class="disclaimer"><strong>Note:</strong> Donations are voluntary and NOT tax-deductible. OTRO INNOVATIONS LLC is a for-profit entity, not a 501(c)(3) nonprofit organization.</p>
+        </div>
+
         <!-- Short Intro -->
         <div class="intro-section">
             <p>OTRO INNOVATIONS LLC is a US-registered global services company specializing in digital marketing solutions, travel planning assistance, international education guidance, and cross-border product sourcing. We serve clients worldwide through online consultation and custom business solutions.</p>
@@ -910,7 +974,23 @@
         </div>
 
         <div class="services-grid">
-            <!-- Service 1: Digital Marketing & Consulting -->
+            <!-- NEW Service 1: Humanitarian Programs (ADD THIS FIRST) -->
+            <div class="service-card">
+                <i class="fas fa-hands-helping service-icon"></i>
+                <h3>HUMANITARIAN PROGRAMS</h3>
+                <ul>
+                    <li>O Human Initiative - Community Aid</li>
+                    <li>Voluntary Donation Collection</li>
+                    <li>Food, Shelter & Healthcare Support</li>
+                    <li>Emergency Relief Programs</li>
+                    <li>Community Development Projects</li>
+                </ul>
+                <div class="disclaimer">
+                    <strong>Note:</strong> Donations collected for humanitarian initiatives are voluntary and NOT tax-deductible.
+                </div>
+            </div>
+
+            <!-- Service 2: Digital Marketing & Consulting -->
             <div class="service-card">
                 <i class="fas fa-laptop-code service-icon"></i>
                 <h3>DIGITAL MARKETING & CONSULTING</h3>
@@ -924,7 +1004,7 @@
                 </ul>
             </div>
 
-            <!-- Service 2: Travel Assistance -->
+            <!-- Service 3: Travel Assistance -->
             <div class="service-card">
                 <i class="fas fa-plane service-icon"></i>
                 <h3>TRAVEL ASSISTANCE</h3>
@@ -935,7 +1015,7 @@
                 </ul>
             </div>
 
-            <!-- Service 3: Study Abroad Guidance -->
+            <!-- Service 4: Study Abroad Guidance -->
             <div class="service-card">
                 <i class="fas fa-graduation-cap service-icon"></i>
                 <h3>STUDY ABROAD GUIDANCE</h3>
@@ -946,7 +1026,7 @@
                 </ul>
             </div>
 
-            <!-- Service 4: International Product Sourcing -->
+            <!-- Service 5: International Product Sourcing -->
             <div class="service-card">
                 <i class="fas fa-globe-americas service-icon"></i>
                 <h3>INTERNATIONAL PRODUCT SOURCING</h3>
@@ -966,6 +1046,11 @@
                     <i class="fas fa-flag-usa benefit-icon"></i>
                     <h4>US-Registered LLC</h4>
                     <p>Legitimate business entity with global reach and compliance</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-layer-group benefit-icon"></i>
+                    <h4>Multiple Initiatives</h4>
+                    <p>Operating humanitarian programs (O Human) and professional services</p>
                 </div>
                 <div class="benefit-item">
                     <i class="fas fa-chart-line benefit-icon"></i>
@@ -1011,6 +1096,7 @@
                 <i class="fas fa-paper-plane"></i> Send Email
             </a>
         </div>
+
         <!-- Social Proof Section -->
         <div class="social-proof">
             <i class="fas fa-clock"></i>
@@ -1031,98 +1117,107 @@
                 <li style="padding-left: 3rem;"><i class="fas fa-arrow-right"></i> Digital Marketing & Social Media</li>
                 <li style="padding-left: 3rem;"><i class="fas fa-arrow-right"></i> China-Bangladesh Trade Operations</li>
                 <li style="padding-left: 3rem;"><i class="fas fa-arrow-right"></i> International Business Consulting</li>
+                <li style="padding-left: 3rem;"><i class="fas fa-arrow-right"></i> Humanitarian Programs (O Human Initiative)</li>
             </ul>
         </div>
     </div>
 
     <!-- Footer -->
     <footer>
-    <div style="max-width: 1200px; margin: 0 auto; padding: 4rem 5%; background: linear-gradient(135deg, var(--dark) 0%, #0f0f0f 100%);">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem;">
-            
-            <!-- Column 1: Company Info -->
-            <div style="color: white;">
-                <div style="font-size: 1.8rem; font-weight: 700; color: var(--neon-gold); margin-bottom: 1rem; letter-spacing: -0.5px;">OTRO INNOVATIONS LLC</div>
-                <p style="color: rgba(255, 255, 255, 0.7); line-height: 1.8; font-size: 0.95rem; margin-bottom: 1.5rem;">
-                    US-registered global services company providing digital marketing, travel assistance, study abroad guidance, and international product sourcing solutions.
-                </p>
-                <div style="display: flex; gap: 1rem; margin-top: 1rem;">
-                    <a href="https://linkedin.com/in/sheikhsocial" target="_blank" style="color: rgba(255, 255, 255, 0.7); font-size: 1.3rem; transition: all 0.3s ease; text-decoration: none;">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="mailto:otroinnovationsllc@gmail.com" style="color: rgba(255, 255, 255, 0.7); font-size: 1.3rem; transition: all 0.3s ease; text-decoration: none;">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="tel:+16368126967" style="color: rgba(255, 255, 255, 0.7); font-size: 1.3rem; transition: all 0.3s ease; text-decoration: none;">
-                        <i class="fas fa-phone"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Column 2: Contact Info -->
-            <div style="color: white;">
-                <h3 style="font-size: 1.3rem; color: var(--neon-gold); margin-bottom: 1.5rem; font-weight: 600;">Contact Us</h3>
-                <ul style="list-style: none; padding: 0; color: rgba(255, 255, 255, 0.7);">
-                    <li style="margin-bottom: 1rem; display: flex; gap: 0.8rem; align-items: flex-start;">
-                        <i class="fas fa-envelope" style="color: var(--neon-gold); font-size: 1rem; margin-top: 3px;"></i>
-                        <span style="font-size: 0.9rem;">otroinnovationsllc@gmail.com</span>
-                    </li>
-                    <li style="margin-bottom: 1rem; display: flex; gap: 0.8rem; align-items: flex-start;">
-                        <i class="fas fa-phone" style="color: var(--neon-gold); font-size: 1rem; margin-top: 3px;"></i>
-                        <span style="font-size: 0.9rem;">+1 (636) 812-6967</span>
-                    </li>
-                    <li style="margin-bottom: 1rem; display: flex; gap: 0.8rem; align-items: flex-start;">
-                        <i class="fas fa-map-marker-alt" style="color: var(--neon-gold); font-size: 1rem; margin-top: 3px;"></i>
-                        <span style="font-size: 0.9rem;">
-                            1209 MOUNTAIN RD PL NE STE R,<br>
-                            ALBUQUERQUE, NM 87110, USA
-                        </span>
-                    </li>
-                </ul>
-            </div>
-            
-            <!-- Column 3: Legal & Climate Badge -->
-            <div style="color: white;">
-                <h3 style="font-size: 1.3rem; color: var(--neon-gold); margin-bottom: 1.5rem; font-weight: 600;">Legal</h3>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 0.8rem;">
-                        <a href="privacy-policy.html" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s ease; display: inline-block; padding: 0.3rem 0; font-size: 0.9rem;">
-                            <i class="fas fa-shield-alt" style="font-size: 0.8rem; margin-right: 0.5rem; color: var(--neon-gold);"></i>
-                            Privacy Policy
-                        </a>
-                    </li>
-                    <li style="margin-bottom: 0.8rem;">
-                        <a href="terms-of-use.html" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s ease; display: inline-block; padding: 0.3rem 0; font-size: 0.9rem;">
-                            <i class="fas fa-file-contract" style="font-size: 0.8rem; margin-right: 0.5rem; color: var(--neon-gold);"></i>
-                            Terms of Use
-                        </a>
-                    </li>
-                    <li style="margin-bottom: 0.8rem;">
-                        <a href="refund-policy.html" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s ease; display: inline-block; padding: 0.3rem 0; font-size: 0.9rem;">
-                            <i class="fas fa-undo" style="font-size: 0.8rem; margin-right: 0.5rem; color: var(--neon-gold);"></i>
-                            Refund Policy
-                        </a>
-                    </li>
-                </ul>
+        <div style="max-width: 1200px; margin: 0 auto; padding: 4rem 5%; background: linear-gradient(135deg, var(--dark) 0%, #0f0f0f 100%);">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem;">
                 
-                <!-- Stripe Climate Badge Only -->
-                <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
-                    <iframe width="380" height="38" style="border:0;" src="https://climate.stripe.com/badge/qnHGLK?theme=light&size=small&locale=en-GB"></iframe>
+                <!-- Column 1: Company Info -->
+                <div style="color: white;">
+                    <div style="font-size: 1.8rem; font-weight: 700; color: var(--neon-gold); margin-bottom: 1rem; letter-spacing: -0.5px;">OTRO INNOVATIONS LLC</div>
+                    <p style="color: rgba(255, 255, 255, 0.7); line-height: 1.8; font-size: 0.95rem; margin-bottom: 1.5rem;">
+                        US-registered global services company providing digital marketing, travel assistance, study abroad guidance, international product sourcing, and humanitarian programs (O Human initiative).
+                    </p>
+                    <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                        <a href="https://linkedin.com/in/sheikhsocial" target="_blank" style="color: rgba(255, 255, 255, 0.7); font-size: 1.3rem; transition: all 0.3s ease; text-decoration: none;">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:otroinnovationsllc@gmail.com" style="color: rgba(255, 255, 255, 0.7); font-size: 1.3rem; transition: all 0.3s ease; text-decoration: none;">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:+16368126967" style="color: rgba(255, 255, 255, 0.7); font-size: 1.3rem; transition: all 0.3s ease; text-decoration: none;">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Column 2: Contact Info -->
+                <div style="color: white;">
+                    <h3 style="font-size: 1.3rem; color: var(--neon-gold); margin-bottom: 1.5rem; font-weight: 600;">Contact Us</h3>
+                    <ul style="list-style: none; padding: 0; color: rgba(255, 255, 255, 0.7);">
+                        <li style="margin-bottom: 1rem; display: flex; gap: 0.8rem; align-items: flex-start;">
+                            <i class="fas fa-envelope" style="color: var(--neon-gold); font-size: 1rem; margin-top: 3px;"></i>
+                            <span style="font-size: 0.9rem;">otroinnovationsllc@gmail.com</span>
+                        </li>
+                        <li style="margin-bottom: 1rem; display: flex; gap: 0.8rem; align-items: flex-start;">
+                            <i class="fas fa-phone" style="color: var(--neon-gold); font-size: 1rem; margin-top: 3px;"></i>
+                            <span style="font-size: 0.9rem;">+1 (636) 812-6967</span>
+                        </li>
+                        <li style="margin-bottom: 1rem; display: flex; gap: 0.8rem; align-items: flex-start;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--neon-gold); font-size: 1rem; margin-top: 3px;"></i>
+                            <span style="font-size: 0.9rem;">
+                                1209 MOUNTAIN RD PL NE STE R,<br>
+                                ALBUQUERQUE, NM 87110, USA
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3: Legal & Climate Badge -->
+                <div style="color: white;">
+                    <h3 style="font-size: 1.3rem; color: var(--neon-gold); margin-bottom: 1.5rem; font-weight: 600;">Legal</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.8rem;">
+                            <a href="privacy-policy.html" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s ease; display: inline-block; padding: 0.3rem 0; font-size: 0.9rem;">
+                                <i class="fas fa-shield-alt" style="font-size: 0.8rem; margin-right: 0.5rem; color: var(--neon-gold);"></i>
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li style="margin-bottom: 0.8rem;">
+                            <a href="terms-of-use.html" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s ease; display: inline-block; padding: 0.3rem 0; font-size: 0.9rem;">
+                                <i class="fas fa-file-contract" style="font-size: 0.8rem; margin-right: 0.5rem; color: var(--neon-gold);"></i>
+                                Terms of Use
+                            </a>
+                        </li>
+                        <li style="margin-bottom: 0.8rem;">
+                            <a href="refund-policy.html" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s ease; display: inline-block; padding: 0.3rem 0; font-size: 0.9rem;">
+                                <i class="fas fa-undo" style="font-size: 0.8rem; margin-right: 0.5rem; color: var(--neon-gold);"></i>
+                                Refund Policy
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <!-- NEW: Tax Disclaimer -->
+                    <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(255, 255, 255, 0.05); border-left: 3px solid var(--neon-gold); border-radius: 4px; font-size: 0.85rem; color: rgba(255, 255, 255, 0.6);">
+                        <strong>Important:</strong> OTRO INNOVATIONS LLC is a for-profit entity, NOT a 501(c)(3) nonprofit organization. Donations collected for humanitarian initiatives are voluntary and NOT tax-deductible.
+                    </div>
+                    
+                    <!-- Stripe Climate Badge -->
+                    <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                        <iframe width="380" height="38" style="border:0;" src="https://climate.stripe.com/badge/qnHGLK?theme=light&size=small&locale=en-GB"></iframe>
+                    </div>
                 </div>
             </div>
+            
+            <!-- Bottom Bar -->
+            <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); text-align: center; color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">
+                <p style="margin: 0.5rem 0;">
+                    © 2026 OTRO INNOVATIONS LLC. All rights reserved.
+                </p>
+                <p style="margin: 0.5rem 0; font-size: 0.8rem; color: rgba(255, 255, 255, 0.5);">
+                    Founded by MD IRFAN HOSSAIN | Operating Globally from USA
+                </p>
+                <p style="margin: 0.5rem 0; font-size: 0.8rem; color: rgba(255, 255, 255, 0.5);">
+                    New Mexico LLC | Multi-Initiative Business Entity | Humanitarian Programs & Professional Services
+                </p>
+            </div>
         </div>
-        
-        <!-- Bottom Bar -->
-        <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); text-align: center; color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">
-            <p style="margin: 0.5rem 0;">
-                © 2026 OTRO INNOVATIONS LLC. All rights reserved.
-            </p>
-            <p style="margin: 0.5rem 0; font-size: 0.8rem; color: rgba(255, 255, 255, 0.5);">
-                Founded by MD IRFAN HOSSAIN | Operating Globally from USA
-            </p>
-        </div>
-    </div>
-</footer>
+    </footer>
 
     <script>
         // Navbar scroll effect

@@ -1,1274 +1,352 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OTRO INNOVATIONS LLC | US-Registered Global Services Company</title>
     <meta name="description" content="OTRO INNOVATIONS LLC - US-registered global services company specializing in digital marketing, travel assistance, study abroad guidance, and international product sourcing.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* ========== ALL YOUR EXISTING CSS REMAINS SAME (1180 lines) ========== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #DE2910;
-            --secondary: #006A4E;
-            --neon-gold: #FFEC00;
-            --dark: #1a1a1a;
-            --light: #ffffff;
-            --gray: #64748b;
-            --light-gray: #f5f5f5;
-            --border-radius: 12px;
-            
-            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
-            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
-            --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
-            --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.2);
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.8;
-            color: var(--dark);
-            background: var(--light);
-            overflow-x: hidden;
-        }
-
-        /* ========== NAVIGATION ========== */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.98);
-            padding: 1.2rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: var(--shadow-sm);
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-
-        nav.scrolled {
-            padding: 0.8rem 5%;
-            background: white;
-            box-shadow: var(--shadow-md);
-        }
-
-        .logo {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: var(--primary);
-            letter-spacing: -0.5px;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            position: relative;
-            padding: 0.5rem 0;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary);
-            transition: all 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        /* ========== CONTAINER ========== */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 10rem 5% 5rem;
-        }
-
-        /* ========== PAGE HEADER ========== */
-        .page-header {
-            text-align: center;
-            margin-bottom: 4rem;
-            position: relative;
-            animation: fadeInUp 1s ease;
-        }
-
-        .page-header h1 {
-            font-size: 3.2rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-weight: 700;
-            letter-spacing: -1px;
-            position: relative;
-            display: inline-block;
-        }
-
-        .page-header h1::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--secondary);
-            border-radius: 2px;
-        }
-
-        .page-header p {
-            color: var(--gray);
-            font-size: 1.3rem;
-            font-weight: 300;
-            max-width: 800px;
-            margin: 1.5rem auto 0;
-            line-height: 1.7;
-        }
-
-        /* ========== UNDER CONSTRUCTION BANNER ========== */
-        .under-construction {
-            background: linear-gradient(135deg, rgba(222, 41, 16, 0.1) 0%, rgba(0, 106, 78, 0.1) 100%);
-            padding: 1.5rem 2rem;
-            border-radius: var(--border-radius);
-            text-align: center;
-            margin-bottom: 3rem;
-            border: 2px dashed var(--primary);
-            animation: pulse 2s infinite;
-        }
-
-        .under-construction i {
-            font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            display: block;
-            animation: bounce 1s infinite alternate;
-        }
-
-        .under-construction p {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--dark);
-            margin: 0;
-        }
-
-        /* ========== NEW: O HUMAN INITIATIVE BANNER ========== */
-        .initiative-banner {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            text-align: center;
-            margin: 2rem 0 3rem;
-            box-shadow: var(--shadow-lg);
-            animation: fadeIn 0.8s ease;
-        }
-
-        .initiative-banner h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .initiative-banner p {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-            opacity: 0.95;
-        }
-
-        .initiative-banner .disclaimer {
-            font-size: 0.9rem;
-            opacity: 0.85;
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        /* ========== INTRO SECTION ========== */
-        .intro-section {
-            background: white;
-            padding: 3rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-md);
-            margin-bottom: 3rem;
-            animation: slideInLeft 0.8s ease;
-        }
-
-        .intro-section p {
-            color: var(--gray);
-            font-weight: 300;
-            line-height: 1.9;
-            font-size: 1.1rem;
-        }
-
-        /* ========== PROCESS SECTION ========== */
-        .process-section {
-            background: linear-gradient(135deg, var(--secondary) 0%, #004d38 100%);
-            color: white;
-            padding: 3.5rem;
-            border-radius: var(--border-radius);
-            margin-bottom: 4rem;
-            text-align: center;
-            animation: slideInRight 0.8s ease;
-        }
-
-        .process-section h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-            position: relative;
-            display: inline-block;
-        }
-
-        .process-section h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: var(--neon-gold);
-            border-radius: 2px;
-        }
-
-        .process-section p {
-            font-size: 1.15rem;
-            margin-top: 1.5rem;
-            font-weight: 300;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.8;
-        }
-
-        /* ========== SERVICES GRID ========== */
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-weight: 700;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 70px;
-            height: 3px;
-            background: var(--secondary);
-            border-radius: 2px;
-        }
-
-        .section-title p {
-            color: var(--gray);
-            font-size: 1.1rem;
-            font-weight: 300;
-            max-width: 600px;
-            margin: 1.5rem auto 0;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
-            margin: 3rem 0;
-        }
-
-        .service-card {
-            background: white;
-            padding: 2.8rem 2.2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-md);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            animation: slideIn 0.6s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s ease;
-        }
-
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .service-icon {
-            font-size: 3.2rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            display: inline-block;
-            animation: iconFloat 3s ease-in-out infinite;
-        }
-
-        .service-card:nth-child(1) .service-icon { color: #667eea; }
-        .service-card:nth-child(2) .service-icon { color: var(--primary); }
-        .service-card:nth-child(3) .service-icon { color: var(--secondary); }
-        .service-card:nth-child(4) .service-icon { color: var(--neon-gold); }
-        .service-card:nth-child(5) .service-icon { color: #4f46e5; }
-
-        .service-card h3 {
-            font-size: 1.7rem;
-            color: var(--dark);
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-            position: relative;
-            display: inline-block;
-        }
-
-        .service-card h3::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 40px;
-            height: 2px;
-            background: var(--primary);
-            border-radius: 2px;
-        }
-
-        .service-card:nth-child(1) h3::after { background: #667eea; }
-        .service-card:nth-child(2) h3::after { background: var(--primary); }
-        .service-card:nth-child(3) h3::after { background: var(--secondary); }
-        .service-card:nth-child(4) h3::after { background: var(--neon-gold); }
-        .service-card:nth-child(5) h3::after { background: #4f46e5; }
-
-        .service-card ul {
-            list-style: none;
-            padding: 0;
-            text-align: left;
-        }
-
-        .service-card li {
-            padding: 0.8rem 0;
-            color: var(--gray);
-            font-weight: 300;
-            line-height: 1.7;
-            position: relative;
-            padding-left: 2rem;
-        }
-
-        .service-card li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--primary);
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        .service-card:nth-child(1) li::before { color: #667eea; }
-        .service-card:nth-child(2) li::before { color: var(--primary); }
-        .service-card:nth-child(3) li::before { color: var(--secondary); }
-        .service-card:nth-child(4) li::before { color: var(--neon-gold); }
-        .service-card:nth-child(5) li::before { color: #4f46e5; }
-
-        .service-card .disclaimer {
-            margin-top: 1.5rem;
-            padding: 1rem;
-            background: rgba(222, 41, 16, 0.05);
-            border-left: 3px solid var(--primary);
-            border-radius: 4px;
-            font-size: 0.85rem;
-            color: var(--gray);
-        }
-
-        /* ========== WHY CHOOSE US ========== */
-        .why-choose-section {
-            background: white;
-            padding: 4rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-md);
-            margin: 4rem 0;
-            animation: fadeIn 0.8s ease;
-        }
-
-        .why-choose-section h2 {
-            text-align: center;
-            font-size: 2.2rem;
-            color: var(--primary);
-            margin-bottom: 2.5rem;
-            font-weight: 700;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .benefit-item {
-            text-align: center;
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            background: rgba(222, 41, 16, 0.05);
-            transition: all 0.3s ease;
-        }
-
-        .benefit-item:hover {
-            background: rgba(222, 41, 16, 0.1);
-            transform: translateY(-5px);
-        }
-
-        .benefit-icon {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .benefit-item h4 {
-            font-size: 1.3rem;
-            color: var(--dark);
-            margin-bottom: 0.8rem;
-            font-weight: 600;
-        }
-
-        .benefit-item p {
-            color: var(--gray);
-            font-weight: 300;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        /* ========== CONTACT SECTION ========== */
-        .contact-section {
-            background: linear-gradient(135deg, var(--primary) 0%, #b31f0c 100%);
-            color: white;
-            padding: 4.5rem;
-            border-radius: var(--border-radius);
-            text-align: center;
-            margin: 4rem 0;
-            position: relative;
-            overflow: hidden;
-            animation: slideInUp 0.8s ease;
-        }
-
-        .contact-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
-            z-index: 0;
-        }
-
-        .contact-section h2 {
-            font-size: 2.3rem;
-            margin-bottom: 2rem;
-            font-weight: 700;
-            position: relative;
-            z-index: 1;
-        }
-
-        .contact-info {
-            max-width: 700px;
-            margin: 0 auto 2.5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .contact-info-item {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1.5rem;
-            border-radius: var(--border-radius);
-            margin-bottom: 1.5rem;
-            text-align: left;
-            transition: all 0.3s ease;
-        }
-
-        .contact-info-item:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateX(10px);
-        }
-
-        .contact-info-item i {
-            color: var(--neon-gold);
-            font-size: 1.4rem;
-            margin-right: 1rem;
-            width: 30px;
-            display: inline-block;
-        }
-
-        .contact-info-item strong {
-            color: white;
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-
-        .contact-info-item a {
-            color: var(--neon-gold);
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-
-        .contact-info-item a:hover {
-            color: white;
-            text-decoration: underline;
-        }
-
-        .contact-email {
-            display: inline-block;
-            background: var(--neon-gold);
-            color: var(--dark);
-            padding: 1.1rem 2.8rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 1.15rem;
-            font-weight: 700;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 2px solid var(--neon-gold);
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .contact-email::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.1);
-            transition: all 0.4s ease;
-            z-index: -1;
-        }
-
-        .contact-email:hover::before {
-            left: 100%;
-        }
-
-        .contact-email:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .contact-email i {
-            margin-right: 0.7rem;
-        }
-
-        /* ========== SOCIAL PROOF ========== */
-        .social-proof {
-            background: white;
-            padding: 3.5rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-md);
-            text-align: center;
-            margin: 4rem 0;
-            animation: fadeIn 0.8s ease;
-        }
-
-        .social-proof i {
-            font-size: 4rem;
-            color: var(--gray);
-            margin-bottom: 1.5rem;
-            display: block;
-            animation: spin 3s linear infinite;
-        }
-
-        .social-proof h3 {
-            font-size: 1.8rem;
-            color: var(--dark);
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .social-proof p {
-            color: var(--gray);
-            font-size: 1.1rem;
-            font-weight: 300;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* ========== COMPANY INFO ========== */
-        .company-info {
-            background: white;
-            padding: 3.5rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-md);
-            margin: 4rem 0;
-            animation: slideInUp 0.8s ease;
-        }
-
-        .company-info h3 {
-            font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: 2rem;
-            font-weight: 700;
-            text-align: center;
-            position: relative;
-            display: inline-block;
-        }
-
-        .company-info h3::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 70px;
-            height: 3px;
-            background: var(--secondary);
-            border-radius: 2px;
-        }
-
-        .company-info ul {
-            list-style: none;
-            padding: 0;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .company-info li {
-            padding: 1.2rem 0;
-            border-bottom: 1px solid var(--light-gray);
-            color: var(--gray);
-            font-weight: 300;
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            line-height: 1.7;
-        }
-
-        .company-info li:last-child {
-            border-bottom: none;
-        }
-
-        .company-info li i {
-            color: var(--primary);
-            font-size: 1.3rem;
-            margin-top: 3px;
-            flex-shrink: 0;
-        }
-
-        .company-info li strong {
-            color: var(--dark);
-            font-weight: 600;
-        }
-
-        /* ========== FOOTER ========== */
-        footer {
-            background: var(--dark);
-            color: rgba(255, 255, 255, 0.7);
-            text-align: center;
-            padding: 2.5rem;
-            font-size: 0.9rem;
-            font-weight: 300;
-        }
-
-        footer p {
-            margin: 0.5rem 0;
-        }
-
-        footer .footer-highlight {
-            color: var(--neon-gold);
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-
-        footer .legal-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        footer .legal-links a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-
-        footer .legal-links a:hover {
-            color: var(--neon-gold);
-        }
-
-        /* ========== ANIMATIONS ========== */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.02);
-            }
-        }
-
-        @keyframes bounce {
-            from {
-                transform: translateY(0);
-            }
-            to {
-                transform: translateY(-10px);
-            }
-        }
-
-        @keyframes iconFloat {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        @keyframes spin {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        /* ========== RESPONSIVE DESIGN ========== */
-        @media (max-width: 768px) {
-            .container {
-                padding: 8rem 5% 4rem;
-            }
-            
-            .page-header h1 {
-                font-size: 2.2rem;
-            }
-            
-            .page-header p {
-                font-size: 1.1rem;
-            }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-            
-            .contact-section {
-                padding: 2.5rem;
-            }
-            
-            .contact-info-item {
-                padding: 1rem;
-            }
-            
-            .benefits-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .company-info {
-                padding: 2rem;
-            }
-            
-            .why-choose-section {
-                padding: 2.5rem;
-            }
-            
-            .initiative-banner {
-                padding: 1.5rem;
-            }
-            
-            .initiative-banner h3 {
-                font-size: 1.4rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 7rem 5% 3rem;
-            }
-            
-            .page-header h1 {
-                font-size: 1.8rem;
-            }
-            
-            .service-card {
-                padding: 2rem 1.5rem;
-            }
-            
-            .service-icon {
-                font-size: 2.5rem;
-            }
-            
-            .contact-email {
-                width: 100%;
-                padding: 1rem;
-            }
-            
-            footer .legal-links {
-                flex-direction: column;
-                gap: 0.8rem;
-            }
-        }
-    </style>
+    <meta property="og:title" content="OTRO INNOVATIONS LLC | US-Registered Global Services">
+    <meta property="og:description" content="Digital marketing, travel assistance, study abroad guidance, and international product sourcing.">
+    <title>OTRO INNOVATIONS LLC | US-Registered Global Services Company</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇺🇸</text></svg>">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav id="navbar">
-        <a href="index.html" class="logo">SHEIKH IRFAN</a>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="index.html#about">About</a>
-            <a href="index.html#services">Services</a>
-            <a href="index.html#contact">Contact</a>
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">SHEIKH <span>IRFAN</span></a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+            </div>
         </div>
     </nav>
-
-    <div class="container">
-        <!-- Page Header -->
-        <div class="page-header">
-            <h1>OTRO INNOVATIONS LLC</h1>
-            <p>US-Registered Global Services Company</p>
-        </div>
-
-        <!-- Under Construction Banner -->
-        <div class="under-construction">
-            <i class="fas fa-tools"></i>
-            <p><strong>Official Website Under Development</strong></p>
-        </div>
-
-        <!-- NEW: O Human Initiative Banner -->
-        <div class="initiative-banner">
-            <h3>🌍 O Human Initiative</h3>
-            <p>OTRO INNOVATIONS LLC also operates <strong>O Human</strong> - a humanitarian initiative collecting voluntary donations for community aid programs including food, shelter, and healthcare assistance.</p>
-            <p><strong>Coming Soon:</strong> ohuman.org</p>
-            <p class="disclaimer"><strong>Note:</strong> Donations are voluntary and NOT tax-deductible. OTRO INNOVATIONS LLC is a for-profit entity, not a 501(c)(3) nonprofit organization.</p>
-        </div>
-
-        <!-- Short Intro -->
-        <div class="intro-section">
-            <p>OTRO INNOVATIONS LLC is a US-registered global services company specializing in digital marketing solutions, travel planning assistance, international education guidance, and cross-border product sourcing. We serve clients worldwide through online consultation and custom business solutions.</p>
-        </div>
-
-        <!-- Process Section -->
-        <div class="process-section">
-            <h2>HOW WE WORK</h2>
-            <p>We work closely with clients to understand needs, provide tailored service solutions, and manage logistics from start to finish. Our aim is transparent, reliable support that helps individuals and businesses expand globally through digital channels and international trade corridors.</p>
-        </div>
-
-        <!-- Services Section -->
-        <div class="section-title">
-            <h2>OUR SERVICES</h2>
-            <p>Comprehensive solutions for international business and personal needs</p>
-        </div>
-
-        <div class="services-grid">
-            <!-- NEW Service 1: Humanitarian Programs (ADD THIS FIRST) -->
-            <div class="service-card">
-                <i class="fas fa-hands-helping service-icon"></i>
-                <h3>HUMANITARIAN PROGRAMS</h3>
-                <ul>
-                    <li>O Human Initiative - Community Aid</li>
-                    <li>Voluntary Donation Collection</li>
-                    <li>Food, Shelter & Healthcare Support</li>
-                    <li>Emergency Relief Programs</li>
-                    <li>Community Development Projects</li>
-                </ul>
-                <div class="disclaimer">
-                    <strong>Note:</strong> Donations collected for humanitarian initiatives are voluntary and NOT tax-deductible.
-                </div>
-            </div>
-
-            <!-- Service 2: Digital Marketing & Consulting -->
-            <div class="service-card">
-                <i class="fas fa-laptop-code service-icon"></i>
-                <h3>DIGITAL MARKETING & CONSULTING</h3>
-                <ul>
-                    <li>Social Media Advertising (Facebook, TikTok, Instagram Reels, YouTube)</li>
-                    <li>B2B Growth Strategy & Lead Generation</li>
-                    <li>Market Research (China-Bangladesh Trade Corridors)</li>
-                    <li>Email Marketing & Drip Campaigns</li>
-                    <li>Content Creation & Video Production</li>
-                    <li>Cross-Border Business Consulting</li>
-                </ul>
-            </div>
-
-            <!-- Service 3: Travel Assistance -->
-            <div class="service-card">
-                <i class="fas fa-plane service-icon"></i>
-                <h3>TRAVEL ASSISTANCE</h3>
-                <ul>
-                    <li>Visa Guidance & Document Preparation</li>
-                    <li>Flight & Accommodation Booking Support</li>
-                    <li>B2B and B2C Ticket Distribution Services</li>
-                </ul>
-            </div>
-
-            <!-- Service 4: Study Abroad Guidance -->
-            <div class="service-card">
-                <i class="fas fa-graduation-cap service-icon"></i>
-                <h3>STUDY ABROAD GUIDANCE</h3>
-                <ul>
-                    <li>University Shortlisting & Program Selection</li>
-                    <li>Application & Essay Preparation Support</li>
-                    <li>Scholarship & Admission Counseling</li>
-                </ul>
-            </div>
-
-            <!-- Service 5: International Product Sourcing -->
-            <div class="service-card">
-                <i class="fas fa-globe-americas service-icon"></i>
-                <h3>INTERNATIONAL PRODUCT SOURCING</h3>
-                <ul>
-                    <li>Supplier Vetting & Negotiation</li>
-                    <li>Freight & Logistics Coordination</li>
-                    <li>Quality Control Oversight</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Why Choose Us Section -->
-        <div class="why-choose-section">
-            <h2>WHY CHOOSE OTRO INNOVATIONS LLC</h2>
-            <div class="benefits-grid">
-                <div class="benefit-item">
-                    <i class="fas fa-flag-usa benefit-icon"></i>
-                    <h4>US-Registered LLC</h4>
-                    <p>Legitimate business entity with global reach and compliance</p>
-                </div>
-                <div class="benefit-item">
-                    <i class="fas fa-layer-group benefit-icon"></i>
-                    <h4>Multiple Initiatives</h4>
-                    <p>Operating humanitarian programs (O Human) and professional services</p>
-                </div>
-                <div class="benefit-item">
-                    <i class="fas fa-chart-line benefit-icon"></i>
-                    <h4>Digital-First Approach</h4>
-                    <p>Modern strategies for business growth through digital channels</p>
-                </div>
-                <div class="benefit-item">
-                    <i class="fas fa-handshake benefit-icon"></i>
-                    <h4>Trade Corridor Access</h4>
-                    <p>Direct connections to China-Bangladesh trade networks</p>
-                </div>
-                <div class="benefit-item">
-                    <i class="fas fa-dollar-sign benefit-icon"></i>
-                    <h4>Transparent Pricing</h4>
-                    <p>Clear costs with dedicated client relationship management</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Contact Section -->
-        <div class="contact-section">
-            <h2>GET IN TOUCH</h2>
-            <div class="contact-info">
-                <div class="contact-info-item">
-                    <i class="fas fa-envelope"></i>
-                    <strong>Email:</strong> <a href="mailto:otroinnovationsllc@gmail.com">otroinnovationsllc@gmail.com</a>
-                </div>
-                <div class="contact-info-item" style="text-align: left;">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <strong>Business Address:</strong><br>
-                    1209 MOUNTAIN RD PL NE STE R, ALBUQUERQUE, NM 87110, USA
-                </div>
-                <div class="contact-info-item">
-                    <i class="fas fa-phone"></i>
-                    <strong>Mobile:</strong> <a href="tel:+16368126967">+1 (636) 812-6967</a>
-                </div>
-                <div class="contact-info-item">
-                    <i class="fab fa-linkedin"></i>
-                    <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/sheikhsocial" target="_blank">linkedin.com/in/sheikhsocial</a>
-                </div>
-            </div>
-            <a href="mailto:otroinnovationsllc@gmail.com" class="contact-email">
-                <i class="fas fa-paper-plane"></i> Send Email
-            </a>
-        </div>
-
-        <!-- Social Proof Section -->
-        <div class="social-proof">
-            <i class="fas fa-clock"></i>
-            <h3>CLIENT SUCCESS STORIES</h3>
-            <p>Case Studies & Client Experiences Coming Soon - Stay Tuned!</p>
-        </div>
-
-        <!-- Company Info Section -->
-        <div class="company-info">
-            <h3>ABOUT OTRO INNOVATIONS LLC</h3>
-            <ul>
-                <li><i class="fas fa-check-circle"></i> <strong>Company Type:</strong> Limited Liability Company (LLC)</li>
-                <li><i class="fas fa-check-circle"></i> <strong>Formation Year:</strong> 2024</li>
-                <li><i class="fas fa-check-circle"></i> <strong>Jurisdiction:</strong> State of New Mexico, USA</li>
-                <li><i class="fas fa-check-circle"></i> <strong>Business Location:</strong> Albuquerque, NM</li>
-                <li><i class="fas fa-check-circle"></i> <strong>Founder & Managing Member:</strong> MD IRFAN HOSSAIN</li>
-                <li><i class="fas fa-check-circle"></i> <strong>Core Expertise:</strong></li>
-                <li style="padding-left: 3rem;"><i class="fas fa-arrow-right"></i> Digital Marketing & Social Media</li>
-                <li style="padding-left: 3rem;"><i class="fas fa-arrow-right"></i> China-Bangladesh Trade Operations</li>
-                <li style="padding-left: 3rem;"><i class="fas fa-arrow-right"></i> International Business Consulting</li>
-                <li style="padding-left: 3rem;"><i class="fas fa-arrow-right"></i> Humanitarian Programs (O Human Initiative)</li>
-            </ul>
-        </div>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <div style="max-width: 1200px; margin: 0 auto; padding: 4rem 5%; background: linear-gradient(135deg, var(--dark) 0%, #0f0f0f 100%);">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem;">
-                
-                <!-- Column 1: Company Info -->
-                <div style="color: white;">
-                    <div style="font-size: 1.8rem; font-weight: 700; color: var(--neon-gold); margin-bottom: 1rem; letter-spacing: -0.5px;">OTRO INNOVATIONS LLC</div>
-                    <p style="color: rgba(255, 255, 255, 0.7); line-height: 1.8; font-size: 0.95rem; margin-bottom: 1.5rem;">
-                        US-registered global services company providing digital marketing, travel assistance, study abroad guidance, international product sourcing, and humanitarian programs (O Human initiative).
-                    </p>
-                    <div style="display: flex; gap: 1rem; margin-top: 1rem;">
-                        <a href="https://linkedin.com/in/sheikhsocial" target="_blank" style="color: rgba(255, 255, 255, 0.7); font-size: 1.3rem; transition: all 0.3s ease; text-decoration: none;">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="mailto:otroinnovationsllc@gmail.com" style="color: rgba(255, 255, 255, 0.7); font-size: 1.3rem; transition: all 0.3s ease; text-decoration: none;">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="tel:+16368126967" style="color: rgba(255, 255, 255, 0.7); font-size: 1.3rem; transition: all 0.3s ease; text-decoration: none;">
-                            <i class="fas fa-phone"></i>
-                        </a>
-                    </div>
+    <header class="hero otro-hero" id="hero">
+        <div class="hero-grid"></div>
+        <div class="hero-shapes">
+            <div class="shape shape-1" style="background: #4f46e5;"></div>
+            <div class="shape shape-2" style="background: var(--primary); animation-delay: -5s;"></div>
+            <div class="shape shape-3" style="background: var(--accent); animation-delay: -10s;"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="dot"></span> US-Registered LLC
+            </div>
+            <h1>OTRO INNOVATIONS LLC</h1>
+            <p class="typewriter" id="typewriter"></p>
+            <p class="hero-tagline">Digital Marketing &bull; Travel Assistance &bull; Study Abroad &bull; Product Sourcing &bull; Humanitarian Programs</p>
+            <div class="hero-actions">
+                <a href="#services" class="btn btn-primary"><i class="fas fa-list"></i> Our Services</a>
+                <a href="#contact" class="btn btn-ghost"><i class="fas fa-envelope"></i> Get In Touch</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="intro">
+            <div class="container">
+                <div class="initiative-banner reveal">
+                    <h3><i class="fas fa-globe"></i> O Human Initiative</h3>
+                    <p>OTRO INNOVATIONS LLC also operates <strong>O Human</strong> — a humanitarian initiative collecting voluntary donations for community aid programs including food, shelter, and healthcare assistance.</p>
+                    <p><strong>Coming Soon:</strong> ohuman.org</p>
+                    <div class="disclaimer"><strong>Note:</strong> Donations are voluntary and NOT tax-deductible. OTRO INNOVATIONS LLC is a for-profit entity, not a 501(c)(3) nonprofit organization.</div>
                 </div>
-                
-                <!-- Column 2: Contact Info -->
-                <div style="color: white;">
-                    <h3 style="font-size: 1.3rem; color: var(--neon-gold); margin-bottom: 1.5rem; font-weight: 600;">Contact Us</h3>
-                    <ul style="list-style: none; padding: 0; color: rgba(255, 255, 255, 0.7);">
-                        <li style="margin-bottom: 1rem; display: flex; gap: 0.8rem; align-items: flex-start;">
-                            <i class="fas fa-envelope" style="color: var(--neon-gold); font-size: 1rem; margin-top: 3px;"></i>
-                            <span style="font-size: 0.9rem;">otroinnovationsllc@gmail.com</span>
-                        </li>
-                        <li style="margin-bottom: 1rem; display: flex; gap: 0.8rem; align-items: flex-start;">
-                            <i class="fas fa-phone" style="color: var(--neon-gold); font-size: 1rem; margin-top: 3px;"></i>
-                            <span style="font-size: 0.9rem;">+1 (636) 812-6967</span>
-                        </li>
-                        <li style="margin-bottom: 1rem; display: flex; gap: 0.8rem; align-items: flex-start;">
-                            <i class="fas fa-map-marker-alt" style="color: var(--neon-gold); font-size: 1rem; margin-top: 3px;"></i>
-                            <span style="font-size: 0.9rem;">
-                                1209 MOUNTAIN RD PL NE STE R,<br>
-                                ALBUQUERQUE, NM 87110, USA
-                            </span>
-                        </li>
-                    </ul>
+                <div class="card reveal" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                    <p style="color: var(--text-secondary); font-size: 1.125rem; line-height: 1.8;">OTRO INNOVATIONS LLC is a US-registered global services company specializing in digital marketing solutions, travel planning assistance, international education guidance, and cross-border product sourcing. We serve clients worldwide through online consultation and custom business solutions.</p>
                 </div>
-                
-                <!-- Column 3: Legal & Climate Badge -->
-                <div style="color: white;">
-                    <h3 style="font-size: 1.3rem; color: var(--neon-gold); margin-bottom: 1.5rem; font-weight: 600;">Legal</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 0.8rem;">
-                            <a href="privacy-policy.html" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s ease; display: inline-block; padding: 0.3rem 0; font-size: 0.9rem;">
-                                <i class="fas fa-shield-alt" style="font-size: 0.8rem; margin-right: 0.5rem; color: var(--neon-gold);"></i>
-                                Privacy Policy
-                            </a>
-                        </li>
-                        <li style="margin-bottom: 0.8rem;">
-                            <a href="terms-of-use.html" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s ease; display: inline-block; padding: 0.3rem 0; font-size: 0.9rem;">
-                                <i class="fas fa-file-contract" style="font-size: 0.8rem; margin-right: 0.5rem; color: var(--neon-gold);"></i>
-                                Terms of Use
-                            </a>
-                        </li>
-                        <li style="margin-bottom: 0.8rem;">
-                            <a href="refund-policy.html" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s ease; display: inline-block; padding: 0.3rem 0; font-size: 0.9rem;">
-                                <i class="fas fa-undo" style="font-size: 0.8rem; margin-right: 0.5rem; color: var(--neon-gold);"></i>
-                                Refund Policy
-                            </a>
-                        </li>
-                    </ul>
-                    
-                    <!-- NEW: Tax Disclaimer -->
-                    <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(255, 255, 255, 0.05); border-left: 3px solid var(--neon-gold); border-radius: 4px; font-size: 0.85rem; color: rgba(255, 255, 255, 0.6);">
-                        <strong>Important:</strong> OTRO INNOVATIONS LLC is a for-profit entity, NOT a 501(c)(3) nonprofit organization. Donations collected for humanitarian initiatives are voluntary and NOT tax-deductible.
+            </div>
+        </section>
+
+        <section id="services" class="bg-alt">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label">What We Do</span>
+                    <h2>Our <span class="gradient-text">Services</span></h2>
+                    <p>Comprehensive solutions for international business and personal needs</p>
+                </div>
+                <div class="service-grid-otro">
+                    <div class="service-card-otro reveal">
+                        <div class="icon" style="color: #4f46e5;"><i class="fas fa-hands-helping"></i></div>
+                        <h3>Humanitarian Programs</h3>
+                        <ul>
+                            <li>O Human Initiative — Community Aid</li>
+                            <li>Voluntary Donation Collection</li>
+                            <li>Food, Shelter & Healthcare Support</li>
+                            <li>Emergency Relief Programs</li>
+                            <li>Community Development Projects</li>
+                        </ul>
+                        <div class="disclaimer"><strong>Note:</strong> Donations collected for humanitarian initiatives are voluntary and NOT tax-deductible.</div>
                     </div>
-                    
-                    <!-- Stripe Climate Badge -->
-                    <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
-                        <iframe width="380" height="38" style="border:0;" src="https://climate.stripe.com/badge/qnHGLK?theme=light&size=small&locale=en-GB"></iframe>
+                    <div class="service-card-otro reveal">
+                        <div class="icon" style="color: var(--primary);"><i class="fas fa-laptop-code"></i></div>
+                        <h3>Digital Marketing & Consulting</h3>
+                        <ul>
+                            <li>Social Media Advertising (Facebook, TikTok, Instagram Reels, YouTube)</li>
+                            <li>B2B Growth Strategy & Lead Generation</li>
+                            <li>Market Research (China-Bangladesh Trade Corridors)</li>
+                            <li>Email Marketing & Drip Campaigns</li>
+                            <li>Content Creation & Video Production</li>
+                            <li>Cross-Border Business Consulting</li>
+                        </ul>
+                    </div>
+                    <div class="service-card-otro reveal">
+                        <div class="icon" style="color: var(--secondary);"><i class="fas fa-plane"></i></div>
+                        <h3>Travel Assistance</h3>
+                        <ul>
+                            <li>Visa Guidance & Document Preparation</li>
+                            <li>Flight & Accommodation Booking Support</li>
+                            <li>B2B and B2C Ticket Distribution Services</li>
+                        </ul>
+                    </div>
+                    <div class="service-card-otro reveal">
+                        <div class="icon" style="color: var(--accent); text-shadow: 0 0 20px rgba(255,215,0,0.3);"><i class="fas fa-graduation-cap"></i></div>
+                        <h3>Study Abroad Guidance</h3>
+                        <ul>
+                            <li>University Shortlisting & Program Selection</li>
+                            <li>Application & Essay Preparation Support</li>
+                            <li>Scholarship & Admission Counseling</li>
+                        </ul>
+                    </div>
+                    <div class="service-card-otro reveal">
+                        <div class="icon" style="color: #4f46e5;"><i class="fas fa-globe-americas"></i></div>
+                        <h3>International Product Sourcing</h3>
+                        <ul>
+                            <li>Supplier Vetting & Negotiation</li>
+                            <li>Freight & Logistics Coordination</li>
+                            <li>Quality Control Oversight</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            
-            <!-- Bottom Bar -->
-            <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); text-align: center; color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">
-                <p style="margin: 0.5rem 0;">
-                    © 2026 OTRO INNOVATIONS LLC. All rights reserved.
-                </p>
-                <p style="margin: 0.5rem 0; font-size: 0.8rem; color: rgba(255, 255, 255, 0.5);">
-                    Founded by MD IRFAN HOSSAIN | Operating Globally from USA
-                </p>
-                <p style="margin: 0.5rem 0; font-size: 0.8rem; color: rgba(255, 255, 255, 0.5);">
-                    New Mexico LLC | Multi-Initiative Business Entity | Humanitarian Programs & Professional Services
-                </p>
+        </section>
+
+        <section id="why-us">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label">Why Us</span>
+                    <h2>Why Choose <span class="gradient-text">OTRO INNOVATIONS LLC</span></h2>
+                </div>
+                <div class="benefits-grid">
+                    <div class="benefit-card reveal">
+                        <i class="fas fa-flag-usa"></i>
+                        <h4>US-Registered LLC</h4>
+                        <p>Legitimate business entity with global reach and compliance</p>
+                    </div>
+                    <div class="benefit-card reveal">
+                        <i class="fas fa-layer-group"></i>
+                        <h4>Multiple Initiatives</h4>
+                        <p>Operating humanitarian programs (O Human) and professional services</p>
+                    </div>
+                    <div class="benefit-card reveal">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Digital-First Approach</h4>
+                        <p>Modern strategies for business growth through digital channels</p>
+                    </div>
+                    <div class="benefit-card reveal">
+                        <i class="fas fa-handshake"></i>
+                        <h4>Trade Corridor Access</h4>
+                        <p>Direct connections to China-Bangladesh trade networks</p>
+                    </div>
+                    <div class="benefit-card reveal">
+                        <i class="fas fa-dollar-sign"></i>
+                        <h4>Transparent Pricing</h4>
+                        <p>Clear costs with dedicated client relationship management</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="company" class="bg-alt">
+            <div class="container">
+                <div class="company-info-card reveal">
+                    <h3><span class="gradient-text">About OTRO INNOVATIONS LLC</span></h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> <div><strong>Company Type:</strong> Limited Liability Company (LLC)</div></li>
+                        <li><i class="fas fa-check-circle"></i> <div><strong>Formation Year:</strong> 2024</div></li>
+                        <li><i class="fas fa-check-circle"></i> <div><strong>Jurisdiction:</strong> State of New Mexico, USA</div></li>
+                        <li><i class="fas fa-check-circle"></i> <div><strong>Business Location:</strong> Albuquerque, NM</div></li>
+                        <li><i class="fas fa-check-circle"></i> <div><strong>Founder & Managing Member:</strong> MD IRFAN HOSSAIN</div></li>
+                        <li><i class="fas fa-check-circle"></i> <div><strong>Core Expertise:</strong> Digital Marketing & Social Media, China-Bangladesh Trade Operations, International Business Consulting, Humanitarian Programs (O Human Initiative)</div></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label" style="color: var(--accent);">Connect</span>
+                    <h2>Get In <span style="color: var(--accent);">Touch</span></h2>
+                    <p>Ready to work together? Reach out today.</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="reveal">
+                        <div class="contact-info-list">
+                            <div class="contact-info-item">
+                                <i class="fas fa-envelope"></i>
+                                <div><strong>Email</strong><a href="mailto:otroinnovationsllc@gmail.com">otroinnovationsllc@gmail.com</a></div>
+                            </div>
+                            <div class="contact-info-item">
+                                <i class="fas fa-phone"></i>
+                                <div><strong>Phone</strong><a href="tel:+16368126967">+1 (636) 812-6967</a></div>
+                            </div>
+                            <div class="contact-info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div><strong>Address</strong><span>1209 MOUNTAIN RD PL NE STE R, ALBUQUERQUE, NM 87110, USA</span></div>
+                            </div>
+                            <div class="contact-info-item">
+                                <i class="fab fa-linkedin-in"></i>
+                                <div><strong>LinkedIn</strong><a href="https://linkedin.com/in/sheikhsocial" target="_blank">linkedin.com/in/sheikhsocial</a></div>
+                            </div>
+                        </div>
+                        <div class="contact-socials">
+                            <a href="https://linkedin.com/in/sheikhsocial" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="mailto:otroinnovationsllc@gmail.com"><i class="fas fa-envelope"></i></a>
+                            <a href="tel:+16368126967"><i class="fas fa-phone"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-form reveal">
+                        <h3><i class="fas fa-paper-plane"></i> Send an Inquiry</h3>
+                        <form id="contactForm">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group"><label for="name">Name</label><input type="text" id="name" class="form-control" placeholder="Your name" required></div>
+                                <div class="form-group"><label for="email">Email</label><input type="email" id="email" class="form-control" placeholder="your@email.com" required></div>
+                            </div>
+                            <div class="form-group"><label for="subject">Subject</label><input type="text" id="subject" class="form-control" placeholder="How can we help?" required></div>
+                            <div class="form-group"><label for="message">Message</label><textarea id="message" class="form-control" placeholder="Tell us about your project..." required></textarea></div>
+                            <button type="submit" class="btn" style="width: 100%; background: var(--accent); color: var(--text); font-weight: 700;"><i class="fas fa-paper-plane"></i> Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">OTRO <span style="color: var(--accent);">INNOVATIONS</span></a>
+                    <p>US-registered global services company providing digital marketing, travel assistance, study abroad guidance, and international product sourcing.</p>
+                    <div class="footer-socials">
+                        <a href="https://linkedin.com/in/sheikhsocial" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:otroinnovationsllc@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="tel:+16368126967"><i class="fas fa-phone"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services"><i class="fas fa-chevron-right" style="font-size: 0.625rem;"></i> Digital Marketing</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right" style="font-size: 0.625rem;"></i> Travel Assistance</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right" style="font-size: 0.625rem;"></i> Study Abroad</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right" style="font-size: 0.625rem;"></i> Product Sourcing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html"><i class="fas fa-chevron-right" style="font-size: 0.625rem;"></i> Privacy Policy</a></li>
+                        <li><a href="terms-of-use.html"><i class="fas fa-chevron-right" style="font-size: 0.625rem;"></i> Terms of Use</a></li>
+                        <li><a href="refund-policy.html"><i class="fas fa-chevron-right" style="font-size: 0.625rem;"></i> Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-envelope"></i> otroinnovationsllc@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (636) 812-6967</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Albuquerque, NM, USA</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OTRO INNOVATIONS LLC. All rights reserved.</p>
+                <p>Founded by MD IRFAN HOSSAIN | Operating Globally from USA</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        const icon = themeToggle.querySelector('i');
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        icon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        themeToggle.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            icon.className = next === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
         });
 
-        // Smooth scrolling for anchor links
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuToggle.addEventListener('click', () => { menuToggle.classList.toggle('active'); mobileMenu.classList.toggle('active'); });
+        mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { menuToggle.classList.remove('active'); mobileMenu.classList.remove('active'); }));
+
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+
+        const scrollProgress = document.getElementById('scrollProgress');
+        window.addEventListener('scroll', () => { const s = window.scrollY; const d = document.documentElement.scrollHeight - window.innerHeight; scrollProgress.style.width = (s/d*100) + '%'; });
+
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => backToTop.classList.toggle('visible', window.scrollY > 500));
+        backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        const roles = ['Global Services Company', 'Digital Marketing Agency', 'Trade Corridor Specialist', 'Humanitarian Initiative'];
+        let roleIndex = 0, charIndex = 0, isDeleting = false;
+        const typewriter = document.getElementById('typewriter');
+        function type() {
+            const current = roles[roleIndex];
+            typewriter.textContent = isDeleting ? current.substring(0, charIndex - 1) : current.substring(0, charIndex + 1);
+            if (isDeleting) charIndex--; else charIndex++;
+            let speed = isDeleting ? 50 : 100;
+            if (!isDeleting && charIndex === current.length) { speed = 2000; isDeleting = true; }
+            else if (isDeleting && charIndex === 0) { isDeleting = false; roleIndex = (roleIndex + 1) % roles.length; speed = 500; }
+            setTimeout(type, speed);
+        }
+        type();
+
+        const revealObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); }); }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const target = document.querySelector(targetId);
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
             });
         });
 
-        // Scroll reveal animation
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = 1;
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe sections
-        document.querySelectorAll('.service-card, .benefit-item, .contact-info-item').forEach(el => {
-            el.style.opacity = 0;
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value, email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value, message = document.getElementById('message').value;
+            window.location.href = `mailto:otroinnovationsllc@gmail.com?subject=${encodeURIComponent(subject + ' - From ' + name)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message)}`;
+            this.reset();
         });
     </script>
 </body>

@@ -1,0 +1,10 @@
+{
+  "name": "Md Irfan Hossain",
+  "short_name": "Irfan",
+  "description": "International Business student at Huai'an University and founder of OTRO INNOVATIONS LLC.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ebf1ee",
+  "theme_color": "#0d2b2c",
+  "icons": [{"src": "/assets/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any"},{"src": "/assets/apple-touch-icon.png", "sizes": "180x180", "type": "image/png"}]
+}
